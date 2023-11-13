@@ -19,6 +19,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+//import androidx.compose.foundation.gestures.ModifierLocalScrollableContainerProvider.value
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -30,6 +31,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -77,6 +79,15 @@ fun TipTimeLayout() {
         )
         Spacer(modifier = Modifier.height(150.dp))
     }
+}
+
+@Composable
+fun EditNumberField(modifier: Modifier = Modifier) {
+    TextField(
+        value = "",
+        onValueChange = {},
+        modifier = modifier
+    )
 }
 /**
  * Calculates the tip based on the user input and format the tip amount
